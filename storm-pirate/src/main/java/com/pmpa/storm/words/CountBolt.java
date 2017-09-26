@@ -16,13 +16,14 @@ public class CountBolt implements IRichBolt{
 	 */
 	private static final long serialVersionUID = -3009642654496775732L;
 	
-	private HashMap<String,Long> output;
+	private Map<String,Long> output;
 	private long count = 0L;
 	private String sampleWord;
 
 	@Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		// TODO Auto-generated method stub
+		output = new HashMap<String,Long>();
 	}
 
 	@Override
